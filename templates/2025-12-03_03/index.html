@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Themis Legal | Justice & Integrity</title>
+    <meta name="description" content="Themis Legal - Upholding justice with integrity and personalized legal solutions in a minimalist dark mode design.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ccc' d='M10 20H14V4H10V20ZM4 18H8V6H4V18ZM16 16H20V8H16V16Z'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for animations and scrollbar, enhancing minimalist dark mode */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-track {
+            background: #1a202c; /* gray-900 */
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a5568; /* gray-600 */
+            border-radius: 4px;
+            border: 2px solid #1a202c; /* gray-900 */
+        }
+
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInSlideUp 0.8s ease-out forwards;
+            opacity: 0; /* Start invisible */
+        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans leading-relaxed">
+
+    <!-- Header / Navigation -->
+    <header class="bg-gray-900 py-4 border-b border-gray-800 sticky top-0 z-50">
+        <nav class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-indigo-400 hover:text-indigo-300 transition-colors duration-300">Themis Legal</a>
+            <div class="space-x-8 hidden md:flex">
+                <a href="#hero" class="text-gray-200 hover:text-indigo-400 transition-colors duration-300">Home</a>
+                <a href="#features" class="text-gray-200 hover:text-indigo-400 transition-colors duration-300">Services</a>
+                <a href="#pricing" class="text-gray-200 hover:text-indigo-400 transition-colors duration-300">Approach</a>
+                <a href="#footer" class="text-gray-200 hover:text-indigo-400 transition-colors duration-300">Contact</a>
+            </div>
+            <!-- Mobile menu button (placeholder, would require JS) -->
+            <button class="md:hidden text-gray-200 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-gray-900 py-20 md:py-32 overflow-hidden flex items-center min-h-[calc(100vh-68px)]">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/1920x1080?law,justice,dark');">
+            <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
+                Justice Served with Integrity
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                Upholding your rights and delivering personalized legal solutions with unwavering dedication.
+            </p>
+            <a href="#footer" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 animate-fade-in-up delay-400">
+                Schedule a Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section (Renamed to Services for law firm context) -->
+    <section id="features" class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Our Specialized Legal Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-indigo-500">
+                    <div class="text-5xl text-indigo-400 mb-4 text-center">⚖️</div>
+                    <h3 class="text-xl font-semibold text-white mb-4 text-center">Expert Legal Advice</h3>
+                    <p class="text-gray-300 text-center">Receive clear, concise, and actionable legal guidance from seasoned professionals who understand complex legal landscapes.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-indigo-500">
+                    <div class="text-5xl text-indigo-400 mb-4 text-center">🤝</div>
+                    <h3 class="text-xl font-semibold text-white mb-4 text-center">Personalized Client Care</h3>
+                    <p class="text-gray-300 text-center">We prioritize your individual needs, offering tailored strategies and dedicated support throughout your legal journey.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-indigo-500">
+                    <div class="text-5xl text-indigo-400 mb-4 text-center">🏆</div>
+                    <h3 class="text-xl font-semibold text-white mb-4 text-center">Proven Track Record</h3>
+                    <p class="text-gray-300 text-center">Benefit from our history of successful outcomes and our commitment to achieving the best possible results for our clients.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-indigo-500">
+                    <div class="text-5xl text-indigo-400 mb-4 text-center">🔒</div>
+                    <h3 class="text-xl font-semibold text-white mb-4 text-center">Confidentiality Assured</h3>
+                    <p class="text-gray-300 text-center">Your privacy is paramount. We handle all cases with the utmost discretion and adhere to strict confidentiality protocols.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-indigo-500">
+                    <div class="text-5xl text-indigo-400 mb-4 text-center">📚</div>
+                    <h3 class="text-xl font-semibold text-white mb-4 text-center">In-depth Research</h3>
+                    <p class="text-gray-300 text-center">Thorough investigation and meticulous research form the foundation of our robust legal arguments and strategies.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-indigo-500">
+                    <div class="text-5xl text-indigo-400 mb-4 text-center">📈</div>
+                    <h3 class="text-xl font-semibold text-white mb-4 text-center">Strategic Litigation</h3>
+                    <p class="text-gray-300 text-center">We develop innovative and effective litigation strategies to navigate complex legal challenges and protect your interests.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section (Renamed to Our Approach for law firm context) -->
+    <section id="pricing" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Our Client-Focused Approach</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Approach 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl flex flex-col items-center text-center border border-gray-700 hover:border-indigo-500 transition-colors duration-300">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-3xl text-white font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Initial Consultation</h3>
+                    <p class="text-gray-300 mb-4">A comprehensive discussion to understand your unique situation and outline potential legal avenues.</p>
+                    <p class="text-2xl font-bold text-indigo-400 mb-6">€150 <span class="text-lg text-gray-400 font-normal">/ 60 min</span></p>
+                    <a href="#footer" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-6 rounded-full transition-colors duration-300">
+                        Book Now
+                    </a>
+                </div>
+                <!-- Approach 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl flex flex-col items-center text-center border border-gray-700 hover:border-indigo-500 transition-colors duration-300">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-3xl text-white font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Case Evaluation & Strategy</h3>
+                    <p class="text-gray-300 mb-4">In-depth analysis of your case, development of a tailored legal strategy, and transparent cost estimates.</p>
+                    <p class="text-2xl font-bold text-indigo-400 mb-6">Custom <span class="text-lg text-gray-400 font-normal">/ Per Case</span></p>
+                    <a href="#footer" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-6 rounded-full transition-colors duration-300">
+                        Inquire
+                    </a>
+                </div>
+                <!-- Approach 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl flex flex-col items-center text-center border border-gray-700 hover:border-indigo-500 transition-colors duration-300">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-3xl text-white font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Representation & Resolution</h3>
+                    <p class="text-gray-300 mb-4">Dedicated representation through negotiation, mediation, or litigation to achieve the best possible outcome.</p>
+                    <p class="text-2xl font-bold text-indigo-400 mb-6">Varies <span class="text-lg text-gray-400 font-normal">/ Based on Scope</span></p>
+                    <a href="#footer" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-6 rounded-full transition-colors duration-300">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="bg-gray-800 py-12 md:py-16 border-t border-gray-700">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Contact Us</h3>
+                <p class="text-gray-300 mb-2">123 Justice Avenue, Suite 400</p>
+                <p class="text-gray-300 mb-2">Legal City, LC 90210</p>
+                <p class="text-gray-300 mb-2">Phone: <a href="tel:+15551234567" class="text-indigo-400 hover:underline">+1 (555) 123-4567</a></p>
+                <p class="text-gray-300">Email: <a href="mailto:info@themislegal.com" class="text-indigo-400 hover:underline">info@themislegal.com</a></p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#hero" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Home</a></li>
+                    <li><a href="#features" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Services</a></li>
+                    <li><a href="#pricing" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Our Approach</a></li>
+                    <li><a href="#footer" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- About Us / Mission -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Our Mission</h3>
+                <p class="text-gray-300">
+                    At Themis Legal, we are dedicated to providing ethical, effective, and empathetic legal representation, ensuring justice is accessible to all.
+                </p>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400 text-sm">
+            &copy; 2023 Themis Legal. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
