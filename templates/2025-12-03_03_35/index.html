@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Dashboard - Brutalism Neon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-green': '#39FF14', // Vibrant neon green
+                        'brutal-dark': '#111111', // Very dark background
+                        'brutal-medium': '#222222', // Slightly lighter dark
+                        'brutal-light': '#aaaaaa', // Gray for text
+                    },
+                    fontFamily: {
+                        sans: ['"Roboto Mono"', 'monospace'], // Monospace for brutalism
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Brutalist underline effect for headlines */
+        .brutal-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .brutal-underline::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px; /* Adjust thickness */
+            width: 100%;
+            height: 5px; /* Adjust thickness */
+            background-color: #39FF14; /* neon-green */
+            transform-origin: bottom left;
+            transform: scaleX(1);
+            transition: transform 0.3s ease-out;
+        }
+
+        /* Custom Brutalist underline for secondary text (e.g., hero paragraph) */
+        .brutal-underline-secondary {
+            position: relative;
+            display: inline-block;
+        }
+        .brutal-underline-secondary::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px; /* Adjust thickness */
+            width: 100%;
+            height: 3px; /* Adjust thickness */
+            background-color: #aaaaaa; /* brutal-light */
+            transform-origin: bottom left;
+            transform: scaleX(1);
+            transition: transform 0.3s ease-out;
+        }
+
+        /* Brutalist underline for pricing headers */
+        .brutal-underline-sm {
+            position: relative;
+            display: inline-block;
+        }
+        .brutal-underline-sm::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px; /* Adjust thickness */
+            width: 100%;
+            height: 3px; /* Adjust thickness */
+            background-color: #39FF14; /* neon-green */
+            transform-origin: bottom left;
+            transform: scaleX(1);
+            transition: transform 0.3s ease-out;
+        }
+
+
+        /* Brutalist shadow utility classes */
+        .brutal-shadow {
+            box-shadow: 8px 8px 0 0 #39FF14; /* neon-green */
+        }
+        .brutal-shadow-sm {
+            box-shadow: 6px 6px 0 0 #aaaaaa; /* brutal-light */
+        }
+        .brutal-shadow-lg {
+            box-shadow: 12px 12px 0 0 #39FF14; /* neon-green */
+        }
+        .brutal-button {
+            box-shadow: 6px 6px 0 0 #39FF14; /* neon-green */
+        }
+        .brutal-button-light {
+            box-shadow: 6px 6px 0 0 #aaaaaa; /* brutal-light */
+        }
+        .brutal-button:hover {
+             box-shadow: 3px 3px 0 0 #111111; /* brutal-dark */
+             transform: translate(3px, 3px);
+        }
+         .brutal-button-light:hover {
+             box-shadow: 3px 3px 0 0 #111111; /* brutal-dark */
+             transform: translate(3px, 3px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-brutal-dark text-brutal-light min-h-screen">
+
+    <!-- Header / Navigation (Simple Brutalist) -->
+    <nav class="bg-brutal-medium p-6 border-b-4 border-neon-green relative z-20">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-neon-green text-3xl font-bold uppercase tracking-widest">SaaS_BRUTAL</a>
+            <div class="space-x-8 hidden md:flex">
+                <a href="#hero" class="text-brutal-light hover:text-neon-green transition duration-300 uppercase">Home</a>
+                <a href="#features" class="text-brutal-light hover:text-neon-green transition duration-300 uppercase">Features</a>
+                <a href="#pricing" class="text-brutal-light hover:text-neon-green transition duration-300 uppercase">Pricing</a>
+                <a href="#contact" class="text-brutal-light hover:text-neon-green transition duration-300 uppercase">Contact</a>
+            </div>
+            <button class="md:hidden text-neon-green text-2xl">&#9776;</button> <!-- Hamburger icon -->
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-brutal-dark text-brutal-light h-screen flex items-center justify-center text-center p-8 border-b-4 border-neon-green">
+        <div class="relative z-10 max-w-4xl">
+            <h1 class="text-6xl md:text-8xl font-bold text-neon-green mb-6 leading-tight uppercase tracking-tighter brutal-underline">
+                Unlock <span class="text-brutal-light">Raw</span> Power.
+            </h1>
+            <p class="text-2xl md:text-3xl mb-10 leading-relaxed brutal-underline-secondary">
+                Experience the uncompromised efficiency of our SaaS platform. No frills. Pure function.
+            </p>
+            <a href="#pricing" class="inline-block bg-neon-green text-brutal-dark px-10 py-5 text-xl font-bold uppercase border-4 border-neon-green hover:bg-brutal-dark hover:text-neon-green transition-all duration-300 brutal-button">
+                Get Started Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="bg-brutal-dark text-brutal-light py-20 px-8 border-b-4 border-neon-green">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-neon-green mb-16 text-center uppercase brutal-underline">Core Functions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+                <!-- Feature 1 -->
+                <div class="bg-brutal-medium p-8 border-4 border-neon-green brutal-shadow">
+                    <img src="https://source.unsplash.com/random/800x600?circuit,abstract" alt="Feature Image 1" class="w-full h-48 object-cover mb-6 border-2 border-brutal-light">
+                    <h3 class="text-3xl font-bold text-neon-green mb-4 uppercase">Direct Data Access</h3>
+                    <p class="text-lg leading-relaxed">
+                        Unfiltered, real-time access to your vital metrics. See everything, control everything.
+                    </p>
+                    <a href="#" class="inline-block mt-6 text-neon-green hover:text-brutal-light border-b-2 border-neon-green hover:border-brutal-light transition-all duration-300 uppercase text-sm font-bold">Learn More &#8594;</a>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-brutal-medium p-8 border-4 border-neon-green brutal-shadow">
+                    <img src="https://source.unsplash.com/random/800x600?server,data" alt="Feature Image 2" class="w-full h-48 object-cover mb-6 border-2 border-brutal-light">
+                    <h3 class="text-3xl font-bold text-neon-green mb-4 uppercase">Optimized Workflow</h3>
+                    <p class="text-lg leading-relaxed">
+                        Streamline your operations with our no-nonsense interface, designed for speed and efficiency.
+                    </p>
+                    <a href="#" class="inline-block mt-6 text-neon-green hover:text-brutal-light border-b-2 border-neon-green hover:border-brutal-light transition-all duration-300 uppercase text-sm font-bold">Learn More &#8594;</a>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-brutal-medium p-8 border-4 border-neon-green brutal-shadow">
+                    <img src="https://source.unsplash.com/random/800x600?terminal,code" alt="Feature Image 3" class="w-full h-48 object-cover mb-6 border-2 border-brutal-light">
+                    <h3 class="text-3xl font-bold text-neon-green mb-4 uppercase">Unbreakable Security</h3>
+                    <p class="text-lg leading-relaxed">
+                        Your data is secured with robust, transparent protocols. Built to withstand.
+                    </p>
+                    <a href="#" class="inline-block mt-6 text-neon-green hover:text-brutal-light border-b-2 border-neon-green hover:border-brutal-light transition-all duration-300 uppercase text-sm font-bold">Learn More &#8594;</a>
+                </div>
+
+                <!-- Feature 4 (Additional for a more robust grid) -->
+                <div class="bg-brutal-medium p-8 border-4 border-neon-green brutal-shadow">
+                    <img src="https://source.unsplash.com/random/800x600?gear,machinery" alt="Feature Image 4" class="w-full h-48 object-cover mb-6 border-2 border-brutal-light">
+                    <h3 class="text-3xl font-bold text-neon-green mb-4 uppercase">Modular Integration</h3>
+                    <p class="text-lg leading-relaxed">
+                        Connect with your existing tools seamlessly. Our system adapts to your needs.
+                    </p>
+                    <a href="#" class="inline-block mt-6 text-neon-green hover:text-brutal-light border-b-2 border-neon-green hover:border-brutal-light transition-all duration-300 uppercase text-sm font-bold">Learn More &#8594;</a>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-brutal-medium p-8 border-4 border-neon-green brutal-shadow">
+                    <img src="https://source.unsplash.com/random/800x600?cpu,chip" alt="Feature Image 5" class="w-full h-48 object-cover mb-6 border-2 border-brutal-light">
+                    <h3 class="text-3xl font-bold text-neon-green mb-4 uppercase">Scalable Infrastructure</h3>
+                    <p class="text-lg leading-relaxed">
+                        Grow without limits. Our backend scales with your ambition, always ready.
+                    </p>
+                    <a href="#" class="inline-block mt-6 text-neon-green hover:text-brutal-light border-b-2 border-neon-green hover:border-brutal-light transition-all duration-300 uppercase text-sm font-bold">Learn More &#8594;</a>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-brutal-medium p-8 border-4 border-neon-green brutal-shadow">
+                    <img src="https://source.unsplash.com/random/800x600?abstract,grid" alt="Feature Image 6" class="w-full h-48 object-cover mb-6 border-2 border-brutal-light">
+                    <h3 class="text-3xl font-bold text-neon-green mb-4 uppercase">Transparent Analytics</h3>
+                    <p class="text-lg leading-relaxed">
+                        No hidden metrics. Clear, concise, and actionable insights at a glance.
+                    </p>
+                    <a href="#" class="inline-block mt-6 text-neon-green hover:text-brutal-light border-b-2 border-neon-green hover:border-brutal-light transition-all duration-300 uppercase text-sm font-bold">Learn More &#8594;</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="bg-brutal-dark text-brutal-light py-20 px-8 border-b-4 border-neon-green">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-neon-green mb-16 text-center uppercase brutal-underline">Pricing Schematics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+
+                <!-- Basic Plan -->
+                <div class="bg-brutal-medium p-8 border-4 border-brutal-light hover:border-neon-green transition-colors duration-300 brutal-shadow-sm">
+                    <h3 class="text-3xl font-bold text-brutal-light mb-4 uppercase brutal-underline-sm">Base Layer</h3>
+                    <p class="text-5xl font-bold text-neon-green mb-6">
+                        $29<span class="text-brutal-light text-xl">/month</span>
+                    </p>
+                    <ul class="mb-8 space-y-3 text-lg">
+                        <li class="flex items-center"><span class="text-neon-green mr-3">&#10003;</span> Core Features</li>
+                        <li class="flex items-center"><span class="text-neon-green mr-3">&#10003;</span> 10GB Data Storage</li>
+                        <li class="flex items-center"><span class="text-neon-green mr-3">&#10003;</span> Basic Analytics</li>
+                        <li class="flex items-center"><span class="text-brutal-light mr-3">&#10005;</span> Priority Support</li>
+                        <li class="flex items-center"><span class="text-brutal-light mr-3">&#10005;</span> Custom Integrations</li>
+                    </ul>
+                    <a href="#" class="block bg-brutal-light text-brutal-dark px-6 py-3 text-lg font-bold uppercase border-4 border-brutal-light hover:bg-brutal-dark hover:text-neon-green hover:border-neon-green transition-all duration-300 text-center brutal-button-light">
+                        Select Plan
+                    </a>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="bg-brutal-medium p-8 border-4 border-neon-green brutal-shadow-lg scale-105">
+                    <h3 class="text-3xl font-bold text-neon-green mb-4 uppercase brutal-underline-sm">Optimized Core</h3>
+                    <p class="text-6xl font-bold text-neon-green mb-6">
+                        $79<span class="text-brutal-light text-xl">/month</span>
+                    </p>
+                    <ul class="mb-8 space-y-3 text-lg">
+                        <li class="flex items-center"><span class="text-neon-green mr-3">&#10003;</span> All Base Layer Features</li>
+                        <li class="flex items-center"><span class="text-neon-green mr-3">&#10003;</span> 100GB Data Storage</li>
+                        <li class="flex items-center"><span class="text-neon-green mr-3">&#10003;</span> Advanced Analytics</li>
+                        <li class="flex items-center"><span class="text-neon-green mr-3">&#10003;</span> Priority Support</li>
+                        <li class="flex items-center"><span class="text-brutal-light mr-3">&#10005;</span> Custom Integrations</li>
+                    </ul>
+                    <a href="#" class="block bg-neon-green text-brutal-dark px-6 py-3 text-lg font-bold uppercase border-4 border-neon-green hover:bg-brutal-dark hover:text-neon-green transition-all duration-300 text-center brutal-button">
+                        Select Plan
+                    </a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-brutal-medium p-8 border-4 border-brutal-light hover:border-neon-green transition-colors duration-300 brutal-shadow-sm">
+                    <h3 class="text-3xl font-bold text-brutal-light mb-4 uppercase brutal-underline-sm">Total Domination</h3>
+                    <p class="text-5xl font-bold text-neon-green mb-6">
+                        $249<span class="text-brutal-light text-xl">/month</span>
+                    </p>
+                    <ul class="mb-8 space-y-3 text-lg">
+                        <li class="flex items-center"><span class="text-neon-green mr-3">&#10003;</span> All Optimized Core Features</li>
+                        <li class="flex items-center"><span class="text-neon-green mr-3">&#10003;</span> Unlimited Data Storage</li>
+                        <li class="flex items-center"><span class="text-neon-green mr-3">&#10003;</span> Real-time Custom Analytics</li>
+                        <li class="flex items-center"><span class="text-neon-green mr-3">&#10003;</span> Dedicated Support</li>
+                        <li class="flex items-center"><span class="text-neon-green mr-3">&#10003;</span> Full API Access & Integrations</li>
+                    </ul>
+                    <a href="#" class="block bg-brutal-light text-brutal-dark px-6 py-3 text-lg font-bold uppercase border-4 border-brutal-light hover:bg-brutal-dark hover:text-neon-green hover:border-neon-green transition-all duration-300 text-center brutal-button-light">
+                        Select Plan
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-brutal-medium text-brutal-light py-12 px-8 text-center border-t-4 border-neon-green" id="contact">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <a href="#" class="text-neon-green text-2xl font-bold uppercase tracking-widest mb-4 md:mb-0">SaaS_BRUTAL</a>
+                <div class="space-x-6">
+                    <a href="#" class="text-brutal-light hover:text-neon-green transition-colors duration-300 uppercase text-sm">Privacy Policy</a>
+                    <a href="#" class="text-brutal-light hover:text-neon-green transition-colors duration-300 uppercase text-sm">Terms of Service</a>
+                    <a href="#" class="text-brutal-light hover:text-neon-green transition-colors duration-300 uppercase text-sm">Contact Support</a>
+                </div>
+            </div>
+            <p class="text-sm border-t border-brutal-light pt-8 mt-8">
+                &copy; <span id="current-year"></span> SaaS_BRUTAL. All Rights Reserved. Data Integrity Guaranteed.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Optional: Brutalist nav toggle for mobile
+        const navButton = document.querySelector('nav button');
+        const navMenu = document.querySelector('nav div:nth-child(2)'); // Targeting the desktop menu
+        if (navButton && navMenu) {
+            navButton.addEventListener('click', () => {
+                navMenu.classList.toggle('hidden');
+                navMenu.classList.toggle('flex');
+                navMenu.classList.toggle('flex-col'); // Stack vertically on mobile
+                navMenu.classList.toggle('absolute'); // Position absolutely
+                navMenu.classList.toggle('top-full'); // Below the nav bar
+                navMenu.classList.toggle('left-0');
+                navMenu.classList.toggle('w-full');
+                navMenu.classList.toggle('bg-brutal-medium');
+                navMenu.classList.toggle('p-4');
+                navMenu.classList.toggle('space-x-0'); // Remove horizontal space
+                navMenu.classList.toggle('space-y-4'); // Add vertical space
+                navMenu.classList.toggle('border-t-4');
+                navMenu.classList.toggle('border-neon-green');
+            });
+        }
+    </script>
+</body>
+</html>
